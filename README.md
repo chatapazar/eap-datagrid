@@ -59,14 +59,14 @@
   
   ```bash
   cd jboss-eap-7.4/bin
-  ./standalone.sh --server-config=standalone-ha.xml -Djboss.default.jgroups.stack=tcp -Dprogram.name=wfl1 -Djboss.node.name=wfl1
+  ./standalone.sh --server-config=standalone-ha.xml -Djboss.default.jgroups.stack=tcp -Dprogram.name=wfl1 -Djboss.node.name=wfl1 -b 0.0.0.0
   ```
 
 - Optional!: Start EAP with port offset (copy jboss-eap-7.4 to jboss-eap-7.4-2) for test multiple eap instance
 
   ```bash
   cd jboss-eap-7.4-2/bin
-  ./standalone.sh --server-config=standalone-ha.xml -Djboss.default.jgroups.stack=tcp -Dprogram.name=wfl2 -Djboss.node.name=wfl2 -Djboss.socket.binding.port-offset=100
+  ./standalone.sh --server-config=standalone-ha.xml -Djboss.default.jgroups.stack=tcp -Dprogram.name=wfl2 -Djboss.node.name=wfl2 -Djboss.socket.binding.port-offset=100 -b 0.0.0.0
   ```  
 
 ## Deploy Test Application
